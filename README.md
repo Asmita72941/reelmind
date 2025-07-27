@@ -2,6 +2,8 @@
 
 - Create React App
 - Configured TailwindCSS 
+- SetUp Routing Configuration
+- Header
 
 # Features
 - Login/Sign Up
