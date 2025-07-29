@@ -1,9 +1,20 @@
 import { BGImage } from "../utils/constants";
 import Header from "./Header";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { checkValidData } from "../utils/validate";
 
 const Login = () => {
     const [isSignInForm, setIsSignInForm] = useState(true);
+
+    const [errorMessage, setErrorMessage] = useState(null);
+
+    const email = useRef(null);
+    const password = useRef(null);
+
+    const handleButtonClick = () => {
+        const message = checkValidData(email.current.value, password.current.value);
+        setErrorMessage(message);
+    }
 
     const toggleSignInForm = () => {
         setIsSignInForm(!isSignInForm);
@@ -16,7 +27,7 @@ const Login = () => {
                 <img src={BGImage} alt="bg-image"/>
             </div>
 
-            <form className="bg-black text-white absolute z-10 w-3/12 p-12 my-36 mx-auto left-0 right-0 rounded-lg bg-opacity-80">
+            <form onSubmit={(e) => e.preventDefault()} className="bg-black text-white absolute z-10 w-3/12 p-12 my-36 mx-auto left-0 right-0 rounded-lg bg-opacity-80">
                 <h1 
                     className="font-bold text-3xl py-4"
                     >{isSignInForm ? "Sign In" : "Sign Up"}</h1>
@@ -27,17 +38,22 @@ const Login = () => {
                     className="p-4 my-4 w-full bg-gray-600"/>}
 
                 <input 
+                    ref={email}
                     type="text" 
                     placeholder="Email Address" 
                     className="p-4 my-4 w-full bg-gray-600"/>
 
                 <input 
+                    ref={password}
                     type="password" 
                     placeholder="Password" 
                     className="p-4 my-4 w-full bg-gray-600"/>
 
+                <p className="text-red-500">{errorMessage}</p>
+
                 <button 
                     className="p-4 my-6 bg-red-800 w-full rounded-lg"
+                    onClick={handleButtonClick}
                     >{isSignInForm ? "Sign In" : "Sign Up"}</button>
 
                 <h1 className="cursor-pointer py-4" 
