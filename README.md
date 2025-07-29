@@ -4,6 +4,8 @@
 - Configured TailwindCSS 
 - SetUp Routing Configuration
 - Header
+- Login Form
+- Sign Up Form
 
 # Features
 - Login/Sign Up
