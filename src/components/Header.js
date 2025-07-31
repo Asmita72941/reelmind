@@ -1,12 +1,31 @@
 import { LOGO } from "../utils/constants";
+import { signOut } from "firebase/auth";
+import {auth} from "../utils/firebase";
 
 const Header = () => {
+    const handleSignOut = () => {
+        signOut(auth).then(()=>{
+
+        }).catch((error) => {
+            
+        })
+    }
+
     return(
-        <div className="absolute z-10 py-2 px-8 bg-gradient-to-b from-black">
+        <div className="absolute z-10 py-2 px-8 bg-gradient-to-b from-black w-screen flex justify-between">
             <img 
                 className="w-44" 
                 src={LOGO} 
                 alt="Logo"/>
+
+            <div className="text-white flex p-2">
+                <img 
+                    className="w-12 h-12 "
+                    src="https://i.redd.it/ty54wbejild91.jpg" 
+                    alt="user-icon"/>
+
+                <button onClick={handleSignOut} className="font-bold">(Sign Out)</button>
+            </div>
         </div>
     )
 }
