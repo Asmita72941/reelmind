@@ -13,6 +13,8 @@
 - Implement Sign In user Api
 - Created Redux Store with userSlice
 - Implement SignOut in Header
+- Updated userProfile with displayName and photoURL
+
 
 # Features
 - Login/Sign Up

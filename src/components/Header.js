@@ -1,8 +1,11 @@
 import { LOGO } from "../utils/constants";
 import { signOut } from "firebase/auth";
 import {auth} from "../utils/firebase";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+    const user = useSelector((store) => store.user);
+
     const handleSignOut = () => {
         signOut(auth).then(()=>{
 
@@ -18,14 +21,14 @@ const Header = () => {
                 src={LOGO} 
                 alt="Logo"/>
 
-            <div className="text-white flex p-2">
+            {user && (<div className="text-white flex p-2">
                 <img 
                     className="w-12 h-12 "
-                    src="https://i.redd.it/ty54wbejild91.jpg" 
+                    src={user.photoURL}
                     alt="user-icon"/>
 
                 <button onClick={handleSignOut} className="font-bold">(Sign Out)</button>
-            </div>
+            </div>)}
         </div>
     )
 }
