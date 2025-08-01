@@ -6,3 +6,11 @@ export const BGImage = "https://assets.nflxext.com/ffe/siteui/vlv3/fa7be975-efc3
 
 export const USER_AVATAR = "https://ih1.redbubble.net/image.618427277.3222/flat,800x800,075,f.u2.jpg";
 
+export const API_OPTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization: "Bearer "+ process.env.REACT_APP_TMDB_KEY,
+  },
+};
+
