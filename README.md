@@ -14,7 +14,8 @@
 - Created Redux Store with userSlice
 - Implement SignOut in Header
 - Updated userProfile with displayName and photoURL
-
+- Unsubscribed to the onauthStateChanged callback
+- Add hardcoded values to the constants file 
 
 # Features
 - Login/Sign Up
