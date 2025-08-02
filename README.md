@@ -18,7 +18,14 @@
 - Add hardcoded values to the constants file 
 - Register TMDB API and create an app and get access token
 - Get data from TMDB now playing movies list API
-- Store movie data in movieSlice
+- Custom Hook for Now Playing Movies
+- Create movieSlice
+- Update Store with movies Data
+- Planning for MainContainer & Secondary Container
+- Fetch Data for Trailer Video
+- Update Store with Trailer Video
+- Create Custom Hooks for Movie Trailer 
+
 
 # Features
 - Login/Sign Up
