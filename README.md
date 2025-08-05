@@ -27,6 +27,7 @@
 - Create Custom Hooks for Movie Trailer 
 - Embedded the YouTube video and make it autoplay and mute
 - Tailwind Classes to make MainContainer look awesome 
+- Build Secondary Component
 
 
 # Features
