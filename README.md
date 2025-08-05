@@ -32,6 +32,8 @@
 - Build Movie Card 
 - Made the Browse Page amazing with Tailwind CSS
 - usePopularMovies Custom hook
+- useTopRatedMovies Custom hook
+- useUpcomingMovies Custom hook
 
 
 # Features
