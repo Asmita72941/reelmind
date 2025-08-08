@@ -18,3 +18,8 @@ export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w185";
 
 export const SUPPORTED_LANGUAGES = [{identifier: "en", name:"English"},{identifier: "hindi", name:"Hindi"},{identifier: "spanish", name:"Spanish"}];
 
+export const OPENROUTER_API_KEY = process.env.REACT_APP_OPENROUTER_API_KEY;
+
+export const REFERER = process.env.REACT_APP_HTTP_REFERER;
+
+export const TITLE = process.env.REACT_APP_APP_TITLE;
