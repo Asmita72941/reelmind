@@ -42,7 +42,7 @@
 - Created gptSlice added data
 - Reused Movie List component to make movie recommendation container 
 - Memoization
-
+- Made our Site Responsive
 
 
 # Features
