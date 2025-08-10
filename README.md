@@ -37,6 +37,12 @@
 - GPT Search Page 
 - GPT Search Bar 
 - Multi-language Feature in our App
+- Integrate GPT APIS
+- Fetched gptMovieSuggestions from TMDBs
+- Created gptSlice added data
+- Reused Movie List component to make movie recommendation container 
+- Memoization
+
 
 
 # Features
