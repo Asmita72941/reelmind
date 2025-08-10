@@ -35,7 +35,7 @@ const Header = () => {
                 alt="Logo"/>
 
             {user && (
-                <div className="flex p-2 text-white">
+                <div className="flex p-1 md:p-2 text-white justify-between">
 
                 {showGptSearch && <select className="bg-gray-900 p-2 m-2" onChange={handleLanguageChange}>
                     {SUPPORTED_LANGUAGES.map((lang) => <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
